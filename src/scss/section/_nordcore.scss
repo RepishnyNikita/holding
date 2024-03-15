@@ -1,0 +1,55 @@
+@use './../base/mixins';
+
+.nordcore {
+    padding: 170px 0 120px;
+    background-color: #dcdde0;;
+    border-radius: 0 0 64px 64px;
+    margin-bottom: -50px;
+    z-index: 10;
+
+    @include mixins.tablet{
+        padding: 80px 0 88px;
+    }
+    @include mixins.mobile{
+        border-radius: 0 0 40px 40px;
+    }
+}
+
+.nordcore__title {
+    margin-bottom: 40px;
+
+    @include mixins.tablet{
+        margin-bottom: 32px;
+    }
+}
+
+.nordcore__row {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.nordcore__swiper{
+    overflow-x:hidden ;
+
+    @include mixins.mobile{
+        overflow-x: unset;
+    }
+}
+
+.nordcore__card{
+    max-width:596px;
+    width: 100%;
+    display: block;
+
+    @include mixins.mobile{
+        max-width: 440px;
+    }
+
+    @include mixins.mobile-x{
+        min-width: 256px;
+    }
+}
+
+.nordcore__btn{
+    width: 100%;
+}

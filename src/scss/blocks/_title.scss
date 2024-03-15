@@ -1,0 +1,106 @@
+@use './../base/mixins';
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+
+    row-gap: 16px; //в hero разрыв строки
+
+    font-weight: 600;
+    font-size: clamp(2.25rem, -0.884rem + 6.51vw, 4rem);
+    line-height: 100%;
+    color: #fcfcfc;
+
+
+    &--noflex{
+        display: unset;
+    }
+
+
+    &--h2{
+        gap: 12px;
+        font-size: clamp(2rem, 1.636rem + 1.82vw, 3rem);
+
+        @include mixins.mobile{
+            gap: 10px;
+        }
+
+        &__black{
+
+            color: #101010;
+        }
+    }
+
+    &--h3{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 104%;
+        color: #101010;
+
+        @include mixins.tablet{
+            font-size: 26px;
+        }
+    }
+
+    &--h4{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+
+        @include mixins.tablet{
+            font-size: 17px;
+        }
+    }
+}
+
+.title__i {
+    color: #4ad6ff;
+
+    &--comand{
+        color: #6549d4;
+    }
+
+    &--green{
+        color: #02cc89;
+    }
+}
+
+.title__span {
+    border-radius: 100px;
+    padding: 10px 32px 20px 32px;
+    background-color: #4ad6ff;
+
+    &--comand{
+        padding: 10px 32px 16px 32px;
+        background-color: #6549d4;
+    }
+
+    @include mixins.mobile{
+        display: none;
+    }
+}
+
+.title__gap{
+    display: none;
+
+    @include mixins.mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+}
+
+.title__gap-text{
+    font-style: normal;
+    border-radius: 100px;
+    padding: 10px 32px 20px 32px;
+    background-color: #4ad6ff;
+
+    &--comand{
+        background-color: #6549d4;
+    }
+}
+
+

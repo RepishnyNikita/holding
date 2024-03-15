@@ -1,0 +1,31 @@
+@use './../base/mixins';
+
+.nav {
+    padding: 16px clamp(1rem, -4.78rem + 9.04vw, 2rem);
+
+
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, -3.79rem + 7.39vw, 28px);
+}
+
+.nav__link{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-family: var(--font-accent);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #101010;
+
+    transition: 0.2s ease-in;
+    
+    &:hover{
+        color: var(--accent);
+    }
+}

@@ -1,0 +1,147 @@
+@use './../base/mixins';
+
+.hero {
+    position: relative;
+    padding-bottom: 120px;
+
+    @include mixins.tablet{
+        padding-bottom: 104px;
+    }
+
+    &::after{
+		content: url(./../img/bg-elements/ellipse-01.svg);
+		position: absolute;
+		top: 0;
+        left: 0;
+        z-index: -1;
+		transform: translate(-55%,55%);
+		filter: blur(300px);
+	}
+}
+
+.hero__wrapper {
+    position: relative;
+    display: grid;
+    gap: 88px;
+}
+
+.hero__top{
+    display: flex;
+    position: relative;
+
+    @include mixins.mobile{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.hero__bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    transform: translate(24rem,-9rem);
+
+    &::before{
+        content: url(./../img/bg-elements/02.svg);
+        position: absolute;
+        bottom: 0;
+        transform: translate(30rem,3rem);
+        filter: blur(80px);
+    }
+
+    @include mixins.tablet{
+        transform: translate(17rem,-6rem);
+
+        &::before{
+            transform: translate(25rem,3rem);
+        }
+    }
+
+    @include mixins.mobile{
+        position: static;
+        transform: translate(0,0);
+
+        &::before{
+            transform: translate(20rem,3rem);
+        }
+    }
+
+    @include mixins.mobile-x{
+        z-index: 1;
+        width: 404px;
+        position: absolute;
+        bottom: 0;
+        transform: translate(15%,68%);
+
+        &::before{
+            transform: translate(5rem,-18rem);
+        }
+    }
+}
+
+.hero__title {
+    position: relative;
+    display: grid;
+    gap: 32px;
+    max-width: 664px;
+
+    &::after{
+		content: url(./../img/bg-elements/01.svg);
+		position: absolute;
+		top: 0;
+		transform: translate(-10rem,-13rem);
+		z-index: -1;
+		filter: blur(68px);
+	}
+
+    @include mixins.mobile{
+        width: unset;
+    }
+}
+
+.hero__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(252, 252, 252, 0.8);
+    font-family: var(--font-accent);
+    max-width: 500px;
+
+    @include mixins.mobile{
+        font-size: 15px;
+    }
+    @include mixins.mobile-x{
+        width: 100%;
+        max-width: unset;
+
+        padding-bottom: 16rem; //пространство для картинки
+    }
+}
+
+.hero__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    z-index: 2;
+
+    @include mixins.laptop{
+        gap: 40px;
+    }
+
+    @include mixins.tablet{
+        gap: 16px;
+        overflow-x: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+        &::-webkit-scrollbar {
+        display: none;
+        }
+    }
+}
+
+.hero__fact {
+    white-space:nowrap;
+}
+
+

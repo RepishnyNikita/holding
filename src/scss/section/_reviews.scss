@@ -1,0 +1,54 @@
+@use './../base/mixins';
+
+.reviews {
+    padding: 180px 0 120px;
+    background-color: #ededed;
+    border-radius: 0 0 64px 64px;
+    margin-bottom: -60px;
+    z-index: 5;
+
+    @include mixins.tablet{
+        padding: 88px 0;
+    }
+    @include mixins.mobile{
+        border-radius: 0 0 40px 40px;
+    }
+}
+
+.reviews__title {
+    margin-bottom: 40px;
+
+    @include mixins.tablet{
+        margin-bottom: 32px;
+    }
+}
+
+.reviews__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 24px;
+
+    @include mixins.tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+.reviews__card {
+    width: clamp(25rem, -20.316rem + 73.68vw, 37.25rem);
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    @include mixins.tablet{
+        max-width: 596px;
+        width: 100%;
+    }
+}
+
+.reviews__btn {
+    width: 100%;
+}

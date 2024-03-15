@@ -1,0 +1,278 @@
+@use './../base/mixins';
+
+.card {
+    position: relative;
+    width: 100%;
+}
+
+.card__top{
+    position: relative;
+}
+
+.card__img {
+    position: relative;
+    margin-bottom: -30px;
+    border-radius: 32px 32px 0 0;
+
+    @include mixins.mobile{
+        border-radius: 24px 24px 0 0;
+    }
+
+    &--directors{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.card__tags {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    border-radius: 50px;
+    padding: 8px 20px 10px 20px;
+    max-width:250px;
+    height: 33px;
+    background-color: #f47616;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 104%;
+    color: var(--text-color);
+
+    z-index: 3;
+
+    @include mixins.mobile{
+        top: 12px;
+        left: 12px;
+        font-size: 13px;
+
+        border-radius: 50px;
+        padding: 6px 16px 8px 16px;
+        max-width: 148px;
+        height: 28px;
+
+        &--width{
+            max-width: 196px;
+        }
+    }
+
+    &--green{
+        background-color: #02cc89;
+    }
+
+    &--violet{
+        background-color: #6549d4;
+    }
+
+    &--directors{
+        bottom: -12px;
+        top: unset;
+    }
+
+    &--directors-right{
+        bottom: -12px;
+        top: unset;
+        transform: translateX(71%);
+    }
+
+
+}
+
+.card__content {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    gap: 12px;
+
+    border-radius: 32px;
+    padding: 40px 40px 48px;
+    background-color: var(--color-accent-bg);
+
+    flex-grow: 1;
+
+    @include mixins.mobile{
+        padding: 24px 24px 32px;
+        border-radius: 24px;
+    }
+
+    &--directors{
+        padding: 64px 28px 32px;
+        border-radius: 0 0 32px 32px;
+        gap: 34px;
+
+        @include mixins.tablet{
+            padding: 56px 24px 24px 24px;
+            gap: 24px;
+        }
+        
+    }
+
+    
+
+    &--reviews{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        gap: 16px;
+
+        @include mixins.mobile{
+            padding-top: 32px;
+        }
+    }
+}
+
+.card__date{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(16, 16, 16, 0.5);
+
+    @include mixins.mobile{
+        font-size: 13px;
+    }
+}
+
+.card__text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: #101010;
+
+    &--gray{
+        font-family: var(--font-accent);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 146%;
+        color: rgba(16, 16, 16, 0.8);
+    }
+
+    &--text-overflow{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+    }
+
+    @include mixins.mobile{
+        font-size: 15px;
+        line-height: 100%;
+    }
+
+    &--reviews{
+        @include mixins.mobile{
+            font-size: 17px;
+            line-height: 146%;
+        }
+    }
+}
+
+
+
+.card__content-btn{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: rgba(20, 93, 239, 0.8);
+
+    @include mixins.mobile{
+        font-size: 15px;
+    }
+}
+
+// PERSON //
+
+.card__content-person {
+    margin-top: 24px;
+    display: grid;
+    gap: 4px;
+
+    &--directors{
+        margin-top: unset;
+        gap: 6px;
+    }
+}
+
+.card__content-person__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    color: var(--text-color-accent);
+
+    @include mixins.mobile{
+        font-size: 17px;
+    }
+
+    &--directors{
+        font-size: 22px;
+        line-height: 116%;
+
+        @include mixins.mobile{
+            font-size: 20px;
+        }
+    }
+}
+
+.card__content-person__post {
+    font-family: var(--font-accent);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(16, 16, 16, 0.5);
+
+    @include mixins.mobile{
+        font-size: 13px;
+    }
+}
+
+/// PERSON ///
+
+
+.card__content-connection {
+    display: grid;
+    gap: 7px;
+}
+
+.card__content-connection__link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(16, 16, 16, 0.5);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    transition: 0.2s ease-in;
+
+    &:hover{
+        color: var(--accent);
+    }
+
+    @include mixins.tablet{
+        font-size: 15px;
+    }
+}
+
+.card__content-connection__tel {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--text-color-accent);
+
+    transition: .2s ease-in;
+
+    &:hover{
+        color: var(--accent);
+    }
+
+    @include mixins.tablet{
+        font-size: 15px;
+    }
+}

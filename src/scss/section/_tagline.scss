@@ -1,0 +1,142 @@
+@use './../base/mixins';
+
+.tagline {
+    padding: 180px 0;
+    background: linear-gradient(135deg, #1c274a 0%, #040711 100%);
+    position: relative;
+    border-radius: 64px;
+    margin-bottom: -60px;
+    z-index: 6;
+    overflow: hidden;
+
+    @include mixins.tablet{
+        padding: 120px 0;
+    }
+
+    @include mixins.mobile{
+        padding: 88px 0;
+        border-radius: 40px;
+    }
+}
+
+.tagline__col {
+    display: grid;
+    gap: 40px;
+    position: relative;
+    
+    &::after{
+        content: url(./../img/tagline/vector.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-14rem,-8rem);
+        filter: blur(80px);
+    }
+
+    &::before{
+        content: url(./../img/tagline/vector-right.svg);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        transform: translate(30%,60%);
+        filter: blur(80px);
+
+        @include mixins.tablet{
+            transform: translate(30%,-20%);
+        }
+        @include mixins.mobile{
+            transform: translate(72%,-30%);
+        }
+    }
+}
+
+.tagline__col-content{
+    position: relative;
+    z-index: 2;
+    max-width: 577px;
+
+    @include mixins.mobile-x{
+        max-width: unset;
+    }
+}
+
+.tagline__col-title {
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 99;
+
+    @include mixins.mobile{
+        margin-bottom: 24px;
+    }
+}
+
+.tagline-col__text {
+    font-family: var(--font-accent);
+
+    margin-bottom: 96px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(252, 252, 252, 0.8);
+
+    @include mixins.mobile{
+        font-size: 15px;
+        margin-bottom: unset;
+    }
+}
+
+.tagline-col__btn {
+    display: flex;
+    align-items: center;
+
+    @include mixins.mobile-x{
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        gap: 8px;
+    }
+}
+
+.tagline__col-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    transform: translate(30rem, -7rem);
+
+    @include mixins.laptop{
+        transform: translate(18rem, -6rem);
+    }
+
+    @include mixins.tablet{
+        position: static;
+        transform: translate(1rem, 0rem);
+    }
+
+    @include mixins.mobile-x{
+        display: contents;
+    }
+}
+
+.tagline__elipse-left{
+    position: absolute;
+    filter: blur(300px);
+    bottom: 0;
+    left: 0;
+    transform: translate(-2%,15%);
+
+    width: 480px;
+    height: 400px;
+
+    background-image: url(./../img/tagline/ellipse.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include mixins.mobile{
+        transform: translate(-22%,-33%);
+        z-index: -1;
+    }
+}
+

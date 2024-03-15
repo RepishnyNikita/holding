@@ -1,0 +1,156 @@
+@use './../base/mixins';
+
+.card-service {
+    // max-width:596px;
+    // width: 100%;
+}
+
+.card-service__top {
+    border-radius: 32px 32px 0 0;
+    height: 144px;
+    background: linear-gradient(225deg, #f47616 0%, #d03916 100%);
+    margin-bottom: -48px;
+
+    &--green{
+        background: linear-gradient(225deg, #5ce1a9 0%, #00ce88 51.04%, #008973 100%);
+    }
+
+    &--bg{
+        background: unset;
+    }
+
+    @include mixins.laptop{
+        margin-bottom: -81px;
+    }
+
+    @include mixins.mobile{
+        border-radius: 24px 24px 0 0;
+    }
+    @include mixins.mobile-x{
+        img{
+            height: 100px;
+        }
+    }
+}
+
+.card-service__bot {
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    border-radius: 32px;
+    padding: 40px;
+    background-color: #fcfcfc;
+
+    @include mixins.tablet{
+        padding: 32px 24px;
+        border-radius: 24px;
+    }
+    @include mixins.mobile-x{
+        min-height: 240px;
+    }
+}
+
+.card-service__bot-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    &--margin{
+        margin-bottom: unset;
+    }
+
+    @include mixins.mobile{
+
+        a{
+            display: none;
+        }
+    }
+}
+
+.card-service__bot-title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include mixins.mobile{
+        gap: 14px;
+    }
+}
+
+.card-service__bot-subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #101010;
+    font-family: var(--font-accent);
+    max-width: 300px;
+
+    &--width{
+        max-width: 400px;
+    }
+
+    @include mixins.mobile{
+        font-size: 13px;
+    }
+}
+
+.card-service__bot-header__link{
+
+    transition: 0.2s ease-in;
+
+    &:hover{
+        opacity: 0.6;
+    }
+
+    @include mixins.mobile{
+        display: none;
+    }
+}
+
+.card-service__bot-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    flex-direction: column;
+
+    @include mixins.mobile{
+        gap: 8px;
+    }
+}
+
+.card-service__bot-item{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
+
+    @include mixins.mobile{
+        gap: 8px;
+    }
+}
+
+.card-service__bot-tags {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 104%;
+
+    border-radius: 50px;
+    padding: 10px 24px 12px;
+    background-color: #f47616;
+
+    &--circle{
+        padding: 10px 13px 12px;
+
+        @include mixins.mobile{
+            display: none;
+        }
+    }
+
+    &--green{
+        background-color: #02cc89;
+    }
+
+    @include mixins.mobile{
+        font-size: 13px;
+        padding: 7px 16px;
+    }
+}

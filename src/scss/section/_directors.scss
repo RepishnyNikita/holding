@@ -1,0 +1,126 @@
+@use './../base/mixins';
+
+.directors {
+    padding: 180px 0 180px;
+    background-color: #dcdde0;
+    margin-bottom: -60px;
+
+    overflow-x:hidden;
+
+    @include mixins.mobile{
+        padding: 88px 0;
+    }
+    user-select: none;
+}
+
+.directors__title {
+    margin-bottom: 24px;
+
+    @include mixins.mobile{
+        margin-bottom: 20px;
+    }
+}
+
+///---------------TOP-------------///
+
+.directors__top,
+.directors__bot{
+    position: relative;
+    display: flex;
+
+    @include mixins.mobile-x{
+        display: block;
+    }
+}
+
+.directors__top-row{
+    overflow-x: hidden;
+    margin-bottom: 60px;
+
+    @include mixins.mobile-x{
+        overflow-x: unset;
+    }
+}
+
+.directors__top-swiper{
+    display: flex;
+}
+
+.directors__top-row__card {
+    max-width: 394px;
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.tablet{
+        max-width: 296px;
+    }
+
+    @include mixins.mobile-x{
+        min-width: 256px;
+    }
+}
+
+.directors__top-prev, 
+.directors__top-next,
+.directors__bot-prev,
+.directors__bot-next{
+    position: absolute;
+    z-index: 22;
+    top: 45%;
+    
+    transition: .2s ease-in;
+
+    &:hover{
+        opacity: 0.7;
+    }
+
+    @include mixins.desktop{
+        top: 54%;
+    }
+    @include mixins.laptop{
+        display: none;
+    }
+}
+
+.directors__top-prev,
+.directors__bot-prev{
+    left: -5%;
+
+    @include mixins.desktop{
+        left: -16px;
+    }
+}
+
+.directors__top-next,
+.directors__bot-next{
+    right: -5%;
+
+    @include mixins.desktop{
+        right: -16px;
+    }
+}
+
+///--------BOT------- ///
+
+
+.directors__bot-swiper{
+    display: flex;
+}
+
+.directors__bot-row{
+    overflow-x:hidden;
+
+    @include mixins.mobile-x{
+        overflow-x: unset;
+    }
+}
+
+.directors__bot-row__card{
+    max-width: 294px;
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.mobile-x{
+        min-width: 256px;
+    }
+}

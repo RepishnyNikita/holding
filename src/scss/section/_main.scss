@@ -1,0 +1,14 @@
+@use './../base/mixins';
+
+main{
+	margin-bottom: -60px;
+	overflow: hidden;
+	z-index: 20;
+	border-radius: 0 0 64px 64px;
+	background: var(--main-bg);
+
+    @include mixins.mobile{
+        border-radius: 0 0 40px 40px;
+    }
+}
+

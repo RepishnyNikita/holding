@@ -1,0 +1,155 @@
+@use './../base/mixins';
+
+.comand {
+    padding-bottom: 120px;
+    position: relative;
+    height: 100%;
+}
+
+.comand__wrapper {
+    position: relative;
+    display: grid;
+    gap: 240px;
+
+    &::before{
+        content: url(./../img/bg-elements/04.svg);
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        transform: translate(51rem,-1rem);
+        filter: blur(80px);
+    }
+
+    &::after{
+        content: url(./../img/bg-elements/05.svg);
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        transform: translate(2rem,26rem);
+        filter: blur(80px);
+    }
+
+    @include mixins.tablet{
+        gap: 120px;
+    }
+}
+
+.comand__title {
+    max-width: 675px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include mixins.tablet{
+        gap: 24px;
+    }
+}
+
+.comand__desc {
+    font-family: var(--font-accent);
+    font-weight: 400;
+    line-height: 160%;
+    color: hsla(0, 0%, 99%, 0.8);
+
+    @include mixins.tablet{
+        font-size: 15px;
+    }
+}
+
+.comand__top {
+    display: flex;
+    justify-content: space-between;
+
+    @include mixins.tablet{
+        flex-direction: column;
+        gap: 64px;
+        align-items: flex-start;
+    }
+}
+
+.comand__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(23%,-33%);
+
+    @include mixins.mobile{
+        width: 900px;
+        transform: translate(-5%,-22%);
+    }
+
+    @include mixins.mobile-x{
+        transform: translate(-19%,-19%);
+    }
+}
+
+.comand__btn {
+
+    @include mixins.mobile-x{
+        width: 100%;
+    }
+}
+
+.comand__row {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mixins.laptop{
+        gap: 40px;
+    }
+
+    @include mixins.tablet{
+        gap: 16px;
+        overflow-x: auto;
+
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
+        &::-webkit-scrollbar {
+        display: none;
+        }
+    }
+    
+}
+
+.comand__fact {
+    width: 100%;
+    white-space: nowrap;
+}
+
+
+
+
+
+//   &::-webkit-scrollbar {
+//     height: 6px;
+// }
+// &::-webkit-scrollbar-track {
+//     background-color: transparent; 
+// }
+// &::-webkit-scrollbar-thumb {
+//     background: #888; 
+//     border-radius: 6px; 
+// }
+
+// &::-webkit-scrollbar-thumb:horizontal {
+//     animation: fadeOut 1s forwards infinite; 
+// }
+
+// @keyframes fadeOut {
+//     from { 
+//         opacity: 1;
+//     }
+//     to {
+//     opacity: 0;
+//     }
+// }
+
+
+
+
+
+

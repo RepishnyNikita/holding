@@ -1,0 +1,183 @@
+@use './../base/mixins';
+
+.header {
+	padding: 16px 0 clamp(40px, 0.682rem + 9.09vw, 120px);
+	position: relative;
+	z-index: 2;
+}
+
+.header__row {
+	display: flex;
+	align-items: center;
+	position: relative;
+
+	&:first-child{
+		margin-bottom: 8px;
+	}
+
+	@include mixins.mobile{
+        justify-content: space-between;
+    }
+
+}
+
+.header__logo , .header__contact, .header__lang, .header__nav, .header__button{
+	display: flex;
+	align-items: center;
+	border-radius: 100px;
+	background-color: #fcfcfc;
+}
+
+.header__logo{
+	user-select: none;
+	max-width: 850px;
+    width: 100%;
+
+	@include mixins.mobile{
+        max-width:70px;
+		// height: 58px;
+    }
+}
+
+.header__lang{
+	max-width: 94px;
+
+	@include mixins.mobile{
+        display: none;
+    }
+}
+
+.header__lang,.header__contact{
+	padding: 8px 9px;
+
+	@include mixins.mobile{
+        padding: 3px 5px;
+    }
+}
+
+.header__lang-btn{
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 12px 12px;
+	max-width: 94px;
+	background-color: #d5e2fc;
+	border-radius: 50px;
+	width: 76px;;
+}
+
+.header__lang-btn__lang {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+
+	svg{
+		stroke: #145CEF;
+	}
+}
+
+.header__contact{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 258px;
+	width: 100%;
+
+	@include mixins.tablet{
+        max-width: 154px;
+    }
+
+}
+
+.header__contact-mail,.header__contact-tel{
+	padding: 12px 12px;
+	background-color: #d5e2fc;
+	border-radius: 50px;
+}
+
+.header__contact-mail {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 42px;
+	height: 42px;
+
+	svg{
+		fill:#145CEF;
+		transition: 0.2s ease-in;
+		&:hover{
+			scale: 1.5;
+			fill: rgba(255, 255, 255, 1);
+		}
+	}
+
+	@include mixins.mobile{
+        width: 48px;
+		height: 48px;
+    }
+}
+
+.header__contact-tel {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 100%;
+	color: #101010;
+	max-width: 198px;
+
+	transition: 0.2s ease-in;
+
+	&:hover{
+		color: var(--accent);
+	}
+
+	@include mixins.tablet{
+        span{
+			display: none;
+		}
+    }
+
+	@include mixins.mobile{
+        width: 48px;
+		height: 48px;
+		justify-content: center;
+    }
+}
+
+.header__nav {
+	max-width: 780px;
+	width: 100%;
+
+	@include mixins.tablet{
+        display: none;
+    }
+}
+
+.header__button {
+	padding: 8px 9px;
+	max-width: 421px;
+	width: 100%;
+
+	@include mixins.tablet{
+        display: none;
+    }
+}
+
+.header__nav-icon{
+	display: none;
+
+	@include mixins.tablet{
+        display: block;
+		width: 42px;
+    }
+
+	@include mixins.mobile{
+        width: 48px;
+		height: 48px;
+    }
+}
+
+
