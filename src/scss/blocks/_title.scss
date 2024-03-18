@@ -11,6 +11,10 @@
     line-height: 100%;
     color: #fcfcfc;
 
+    @include mixins.mobile{
+        display: unset;
+    }
+
 
     &--noflex{
         display: unset;
@@ -100,6 +104,10 @@
 
     &--comand{
         background-color: #6549d4;
+    }
+
+    @include mixins.mobile{
+        padding: 2px 24px 10px 24px;
     }
 }
 

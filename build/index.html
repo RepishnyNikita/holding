@@ -17,12 +17,13 @@
 		<header class="header">
 
     <div class="container">
+
         <div class="header__row">
 
             <div class="header__logo logo "> 
 
                 <a href="#!" target="_blank">
-                    <img src="./img/logo.svg" alt="иконка логотипа">
+                    <img src="./img/logo/logo.svg" alt="иконка логотипа">
                 </a>
 
                 <div class="logo__switcher">
@@ -36,16 +37,24 @@
             </div>
 
             <div class="header__lang"> 
+
                 <button class="header__lang-btn">
                     <img src="./img/icon/ru.svg" alt="Иконка русского флага">
-                    <span class="header__lang-btn__lang">ru
 
+                    <span class="header__lang-btn__lang">ru
                         <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.1084 1.04297L4.49973 4.04297L7.89106 1.04297" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-
                     </span>
                 </button>
+
+                <div class="header__lang-select">
+                    <button class="header__lang-btn">
+                        <img src="./img/icon/usa.png" alt="флаг сша">
+                        <span class="header__lang-btn__lang">en</span>
+                    </button>
+                </div>
+
             </div>
 
             <div class="header__contact ">
@@ -62,25 +71,32 @@
                     <span>+7 (495) 663-65-00 </span>
                 </a>
 
-                <img class="header__nav-icon" src="./img/icon/burger.svg" alt="">
+                <button class="header__contact-icon nav-icon">
+                    <img src="./img/icon/burger.svg" alt="меню">
+                </button>
 
             </div>
 
-            
+        </div>
 
-    </div>
+        <div class="header__row">
 
-    <div class="header__row">
-
-        <div class="header__nav">
-            <nav class="nav">
+            <div class="header__nav">
+                <nav class="nav">
     <ul class="nav__list">
 
-        <li>
-            <a class="nav__link" href="#!">
+        <li class="nav__service">
+            <span class="nav__service-title">
                 Услуги
                 <img src="./img/icon/chevron-down.svg" alt="стрелка вниз">
-            </a>
+            </span>
+
+            <ul class="nav__service-list">
+                <li><a class="nav__service-list-link" href="#!">Подбор персонала</a></li>
+                <li><a class="nav__service-list-link" href="#!">Временный персонал</a></li>
+                <li><a class="nav__service-list-link" href="#!">Консультационные услуги</a></li>
+                <li><a class="nav__service-list-link" href="#!">Еще одна услуга</a></li>
+            </ul>
         </li>
 
         <li>
@@ -91,11 +107,18 @@
             <a class="nav__link" href="#!">Кейсы</a>
         </li>
 
-        <li>
-            <a class="nav__link" href="#!">
+        <li class="nav__media">
+            <span class="nav__media-title" href="#!">
                 Медиа
                 <img src="./img/icon/chevron-down.svg" alt="стрелка вниз">
-            </a>
+            </span>
+
+            <ul class="nav__media-list">
+                <li><a class="nav__media-list-link" href="#!">Статьи</a></li>
+                <li><a class="nav__media-list-link" href="#!">Гайды</a></li>
+                <li><a class="nav__media-list-link" href="#!">Новости</a></li>
+                <li><a class="nav__media-list-link" href="#!">Мероприятия</a></li>
+            </ul>
         </li>
 
         <li>
@@ -107,26 +130,90 @@
         </li>
     </ul>
 </nav>
-        </div>
+            </div>
 
-        <div class="header__button ">
+            <div class="header__button ">
 
-        <button class="btn btn--header">
-                Отправить резюме
-        </button>
+            <button class="btn btn--header">
+                    Отправить резюме
+            </button>
 
-        <button class="btn btn--header-blue">
-                Обсудить проект
-                <img src="./img/icon/btn_icon.svg" alt="">
-        </button>
+            <button class="btn btn--header-blue">
+                    Обсудить проект
+                    <img src="./img/icon/btn_icon.svg" alt="">
+            </button>
+
+            </div>
 
         </div>
 
     </div>
-
-    </div>
-
+    
 </header>
+
+<div class="mobile-nav">
+
+		<div class="mobile-nav__top">
+			<button class="mobile-nav__lang-btn">
+				<img src="./img/icon/ru.svg" alt="Иконка русского флага">
+			</button>
+
+			<a class="mobile-nav__top-link" href="#!">
+				<img src="./img/icon/mail.svg" alt="icon">
+			</a>
+
+			<a class="mobile-nav__top-link" href="#!">
+				<img src="./img/icon/phone.svg" alt="icon">
+			</a>
+
+			<button class="mobile-nav-icon nav-icon">
+				<img src="./img/icon/burger.svg" alt="меню">
+			</button>
+
+		</div>
+
+		<ul class="mobile-nav__list">
+
+			<li class="mobile-nav__item">
+				<a class="mobile-nav__link" href="#!">
+					Услуги
+					<img src="./img/icon/chevron-down.svg" alt="стрелка вниз">
+				</a>
+			</li>
+
+			<li class="mobile-nav__item">
+				<a class="mobile-nav__link" href="#!">О холдинге</a>
+			</li>
+
+			<li class="mobile-nav__item">
+				<a class="mobile-nav__link" href="#!">Кейсы</a>
+			</li>
+
+			<li class="mobile-nav__item">
+				<a class="mobile-nav__link" href="#!">
+					Медиа
+					<img src="./img/icon/chevron-down.svg" alt="стрелка вниз">
+				</a>
+			</li>
+
+			<li class="mobile-nav__item">
+				<a class="mobile-nav__link" href="#!">Вакансии</a>
+			</li>
+
+			<li class="mobile-nav__item">
+				<a class="mobile-nav__link" href="#!">Контакты</a>
+			</li>
+		</ul>
+
+		<div class="mobile-nav__buttons">
+			<button class="mobile-nav__btn btn">Отправить резюме</button>
+			<button class="mobile-nav__btn btn">Обсудить проект</button>
+		</div>
+
+</div>
+
+
+
 
 
 		<section class="hero">
@@ -1525,11 +1612,11 @@
 
 				<div class="footer__top-logo">
 					<a class="footer__top-logo__link" href="#!">
-						<img src="./img/logo-swift.svg" alt="логотиg">
+						<img src="./img/logo/logo-swift.svg" alt="логотиg">
 						Swift<br>Technical
 					</a>
 					<a class="footer__top-logo__link" href="#!">
-						<img src="./img/logo.svg" alt="логотип">
+						<img src="./img/logo/logo.svg" alt="логотип">
 						Nordcore
 					</a>
 				</div>
@@ -1689,122 +1776,120 @@
 			</div>
 		</div>
 
-
-
 		<div class="footer__mobile">
 
-			<div class="footer__mobile-header">
+    <div class="footer__mobile-header">
 
-				<a class="footer__mobile-header__logo" href="#!">
-					<img src="./img/logo-swift.svg" alt="логотип">
-					Swift<br>Technical
-				</a>
+        <a class="footer__mobile-header__logo" href="#!">
+            <img src="./img/logo-swift.svg" alt="логотип">
+            Swift<br>Technical
+        </a>
 
-				<a class="footer__mobile-header__logo" href="#!">
-					<img src="./img/logo.svg" alt="логотип">
-					Nordcore
-				</a>
+        <a class="footer__mobile-header__logo" href="#!">
+            <img src="./img/logo.svg" alt="логотип">
+            Nordcore
+        </a>
 
-				<div class="footer__mobile-header__place">
-					<p class="footer__mobile-header__place-city">Москва</p>
+        <div class="footer__mobile-header__place">
+            <p class="footer__mobile-header__place-city">Москва</p>
 
-					<a href="https://yandex.ru/maps/-/CDFvzMPB" class="footer__mobile-header__place-addres"
-						target="_blank">
-						4й Добрынинский переулок, дом 8, офис R01-202
-					</a>
-				</div>
+            <a href="https://yandex.ru/maps/-/CDFvzMPB" class="footer__mobile-header__place-addres"
+                target="_blank">
+                4й Добрынинский переулок, дом 8, офис R01-202
+            </a>
+        </div>
 
-				<div class="footer__mobile-header__connection">
+        <div class="footer__mobile-header__connection">
 
-					<a class="footer__mobile-header__connection-link" href="#!" target="_blank">
-						Contact@SwiftTechnical.ru
-					</a>
+            <a class="footer__mobile-header__connection-link" href="#!" target="_blank">
+                Contact@SwiftTechnical.ru
+            </a>
 
-					<a class="footer__mobile-header__connection__tel" href="#!" target="_blank">
-						+7 (495) 663-65-00
-					</a>
+            <a class="footer__mobile-header__connection__tel" href="#!" target="_blank">
+                +7 (495) 663-65-00
+            </a>
 
-				</div>
+        </div>
 
-				<div class="footer__mobile-header__contact">
-					<h5 class="footer__mobile-header__contact-title">Почта для резюме</h5>
-					<a class="footer__mobile-header__contact-link" href="#!"
-						target="_blank">Rabota@SwiftTechnical.ru</a>
-				</div>
+        <div class="footer__mobile-header__contact">
+            <h5 class="footer__mobile-header__contact-title">Почта для резюме</h5>
+            <a class="footer__mobile-header__contact-link" href="#!"
+                target="_blank">Rabota@SwiftTechnical.ru</a>
+        </div>
 
-				<div class="footer__mobile-header__social">
-					<a href="#!"><img src="./img/social-icon/tg-black.svg" alt="иконка телеграма"></a>
-					<a href="#!"><img src="./img/social-icon/icon.svg" alt="иконка"></a>
-					<a href="#!"><img src="./img/social-icon/vk-black.svg" alt="иконка вконтакте"></a>
-					<a href="#!"><img src="./img/social-icon/lk.svg" alt="иконка линкинин"></a>
-					<a href="#!"><img src="./img/social-icon/hh.svg" alt="иконка хедхантер"></a>
-				</div>
+        <div class="footer__mobile-header__social">
+            <a href="#!"><img src="./img/social-icon/tg-black.svg" alt="иконка телеграма"></a>
+            <a href="#!"><img src="./img/social-icon/icon.svg" alt="иконка"></a>
+            <a href="#!"><img src="./img/social-icon/vk-black.svg" alt="иконка вконтакте"></a>
+            <a href="#!"><img src="./img/social-icon/lk.svg" alt="иконка линкинин"></a>
+            <a href="#!"><img src="./img/social-icon/hh.svg" alt="иконка хедхантер"></a>
+        </div>
 
-			</div>
+    </div>
 
-			<div class="footer__mobile-links">
+    <div class="footer__mobile-links">
 
-				<div class="footer__mobile-swift">
+        <div class="footer__mobile-swift">
 
-					<h4 class="footer__mobile-swift__title title title--h4">
-						Swift Te chnical
+            <h4 class="footer__mobile-swift__title title title--h4">
+                Swift Te chnical
 
-						<button class="footer__mobile-swift__title-btn">
-							<svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1.1084 1.04297L4.49973 4.04297L7.89106 1.04297" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</button>
+                <button class="footer__mobile-swift__title-btn">
+                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.1084 1.04297L4.49973 4.04297L7.89106 1.04297" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
 
-					</h4>
+            </h4>
 
-					<ul class="footer__mobile-list">
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Подбор персонала</a></li>
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Временный персонал</a></li>
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Консультационные услуги</a></li>
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Подбор персонала</a></li>
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Консультационные услуги</a></li>
-					</ul>
+            <ul class="footer__mobile-list">
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Подбор персонала</a></li>
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Временный персонал</a></li>
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Консультационные услуги</a></li>
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Подбор персонала</a></li>
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Консультационные услуги</a></li>
+            </ul>
 
-				</div>
+        </div>
 
-				<a href="#!" class="footer__mobile-links__link">Кейсы</a>
+        <a href="#!" class="footer__mobile-links__link">Кейсы</a>
 
-				<div class="footer__mobile-media">
+        <div class="footer__mobile-media">
 
-					<h4 class="footer__mobile-media__title title title--h4">
-						Медиа
+            <h4 class="footer__mobile-media__title title title--h4">
+                Медиа
 
-						<button class="footer__mobile-media__title-btn">
-							<svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1.1084 1.04297L4.49973 4.04297L7.89106 1.04297" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						</button>
-					</h4>
+                <button class="footer__mobile-media__title-btn">
+                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.1084 1.04297L4.49973 4.04297L7.89106 1.04297" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </h4>
 
-					<ul class="footer__mobile-list ">
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Статьи</a></li>
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Гайды</a></li>
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Новости</a></li>
-						<li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Мероприятия</a></li>
-					</ul>
-					
-				</div>
+            <ul class="footer__mobile-list ">
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Статьи</a></li>
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Гайды</a></li>
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Новости</a></li>
+                <li class="footer__mobile-list__item"><a href="#!" class="footer__mobile-list__link">Мероприятия</a></li>
+            </ul>
+            
+        </div>
 
-				<a href="#!" class="footer__mobile-links__link">О холдинге</a>
-				<a href="#!" class="footer__mobile-links__link">Вакансии</a>
-				<a href="#!" class="footer__mobile-links__link">Контакты</a>
+        <a href="#!" class="footer__mobile-links__link">О холдинге</a>
+        <a href="#!" class="footer__mobile-links__link">Вакансии</a>
+        <a href="#!" class="footer__mobile-links__link">Контакты</a>
 
-			</div>
+    </div>
 
 
-			<div class="footer__mobile-copyright">
-				<a class="footer__mobile-copyright-item" href="#!">Политика конфиденциальности</a>
-				<a class="footer__mobile-copyright-item" href="#!">Сделано в <span>CULT</span></a>
-				<p class="footer__mobile-copyright-item">Сайт носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) Гражданского кодекса Российской Федерации. Условия и стоимость предоставления услуг необходимо уточнять у менеджера.</p>
-				<p class="footer__mobile-copyright-item">1997–2023 © Nordcore & Swift Technical</p>
-			</div>
+    <div class="footer__mobile-copyright">
+        <a class="footer__mobile-copyright-item" href="#!">Политика конфиденциальности</a>
+        <a class="footer__mobile-copyright-item" href="#!">Сделано в <span>CULT</span></a>
+        <p class="footer__mobile-copyright-item">Сайт носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437(2) Гражданского кодекса Российской Федерации. Условия и стоимость предоставления услуг необходимо уточнять у менеджера.</p>
+        <p class="footer__mobile-copyright-item">1997–2023 © Nordcore & Swift Technical</p>
+    </div>
 
-		</div>
+</div>
 
 	</div>
 </footer>

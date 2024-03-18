@@ -1,0 +1,95 @@
+<header class="header">
+
+    <div class="container">
+
+        <div class="header__row">
+
+            <div class="header__logo logo "> 
+
+                <a href="#!" target="_blank">
+                    <img src="./img/logo/logo.svg" alt="иконка логотипа">
+                </a>
+
+                <div class="logo__switcher">
+
+                    <span class="logo__switcher-holding">Холдинг</span>
+                    <a class="logo__switcher-link" href="#!" target="_blank">Nordcore</a>
+                    <a class="logo__switcher-link" href="#!" target="_blank">Swift Technical</a>
+                    
+                </div>
+
+            </div>
+
+            <div class="header__lang"> 
+
+                <button class="header__lang-btn">
+                    <img src="./img/icon/ru.svg" alt="Иконка русского флага">
+
+                    <span class="header__lang-btn__lang">ru
+                        <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.1084 1.04297L4.49973 4.04297L7.89106 1.04297" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </button>
+
+                <div class="header__lang-select">
+                    <button class="header__lang-btn">
+                        <img src="./img/icon/usa.png" alt="флаг сша">
+                        <span class="header__lang-btn__lang">en</span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="header__contact ">
+
+                <a href="#!" class="header__contact-mail">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 3H3C2.60218 3 2.22064 3.15804 1.93934 3.43934C1.65804 3.72064 1.5 4.10218 1.5 4.5V13.5C1.5 13.8978 1.65804 14.2794 1.93934 14.5607C2.22064 14.842 2.60218 15 3 15H15C15.3978 15 15.7794 14.842 16.0607 14.5607C16.342 14.2794 16.5 13.8978 16.5 13.5V4.5C16.5 4.10218 16.342 3.72064 16.0607 3.43934C15.7794 3.15804 15.3978 3 15 3ZM15 6.525L9 10.5255L3 6.525V4.72275L9 8.7225L15 4.72275V6.525Z">
+                    </svg>
+                        
+                </a>
+
+                <a href="#!" class="header__contact-tel">
+                    <img src="./img/icon/phone.svg" alt="иконка телефона">
+                    <span>+7 (495) 663-65-00 </span>
+                </a>
+
+                <button class="header__contact-icon nav-icon">
+                    <img src="./img/icon/burger.svg" alt="меню">
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="header__row">
+
+            <div class="header__nav">
+                @@include('nav.html')
+            </div>
+
+            <div class="header__button ">
+
+            <button class="btn btn--header">
+                    Отправить резюме
+            </button>
+
+            <button class="btn btn--header-blue">
+                    Обсудить проект
+                    <img src="./img/icon/btn_icon.svg" alt="">
+            </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</header>
+
+@@include('mobile-nav.html')
+
+
+
+

@@ -1,5 +1,8 @@
-// import mobileNav from './modules/mobile-nav.js';
-// mobileNav();
+import mobileNav from "./modules/mobile-nav.js";
+mobileNav();
+
+import changeLang from "./modules/change-language.js";
+changeLang();
 
 import swiperNordcore from "./modules/swiper-nordcore.js";
 swiperNordcore();
@@ -27,11 +30,3 @@ swiperDirectorsBot();
 
 import openListDown from "./modules/footer-mobile.js";
 openListDown();
-
-
-
-
-
-
-
-

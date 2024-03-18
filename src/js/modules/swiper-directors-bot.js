@@ -5,7 +5,6 @@ const swiperDirectorsBot = () => {
     slidesPerView: 1.06,
     spaceBetween: 6,
 
-
     breakpoints: {
       390: {
         slidesPerView: 1.5,

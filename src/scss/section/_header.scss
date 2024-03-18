@@ -15,10 +15,9 @@
 		margin-bottom: 8px;
 	}
 
-	@include mixins.mobile{
+	@include mixins.tablet{
         justify-content: space-between;
     }
-
 }
 
 .header__logo , .header__contact, .header__lang, .header__nav, .header__button{
@@ -33,16 +32,18 @@
 	max-width: 850px;
     width: 100%;
 
-	@include mixins.mobile{
+	@include mixins.tablet{
         max-width:70px;
-		// height: 58px;
     }
+	
 }
 
+
 .header__lang{
+	position: relative;
 	max-width: 94px;
 
-	@include mixins.mobile{
+	@include mixins.tablet{
         display: none;
     }
 }
@@ -63,7 +64,8 @@
 	max-width: 94px;
 	background-color: #d5e2fc;
 	border-radius: 50px;
-	width: 76px;;
+	width: 76px;
+	color: var(--text-color-accent)
 }
 
 .header__lang-btn__lang {
@@ -76,7 +78,35 @@
 	}
 }
 
+.header__lang-select{
+	padding: 8px 9px;
+
+	pointer-events: none;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+	opacity: 0;
+
+	max-width: 94px;
+	border-radius: 100px;
+	background-color: #fcfcfc;
+
+	transition: 0.2s ease-in;
+
+	&--active{
+		z-index: 1;
+		transform: translateY(88%);
+		opacity: 1;
+		pointer-events: unset;
+	}
+}
+
+
 .header__contact{
+	position: relative;
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -166,18 +196,5 @@
     }
 }
 
-.header__nav-icon{
-	display: none;
-
-	@include mixins.tablet{
-        display: block;
-		width: 42px;
-    }
-
-	@include mixins.mobile{
-        width: 48px;
-		height: 48px;
-    }
-}
 
 

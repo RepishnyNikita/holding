@@ -1,6 +1,5 @@
 import Swiper from "swiper/bundle";
 
-
 const swiperDirectorsTop = () => {
   const swiper = new Swiper(".directors__top-row", {
     slidesPerView: 1.06,

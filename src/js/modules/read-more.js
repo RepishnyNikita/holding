@@ -3,10 +3,10 @@ const readMore = () => {
   const textOverflow = document.querySelector(".card__text--text-overflow");
 
   btnReadMore.addEventListener("click", () => {
-    if(textOverflow.style.whiteSpace === 'nowrap'){
-        textOverflow.style.whiteSpace = 'unset'
+    if (textOverflow.style.whiteSpace === "nowrap") {
+      textOverflow.style.whiteSpace = "unset";
     } else {
-        textOverflow.style.whiteSpace = 'nowrap'
+      textOverflow.style.whiteSpace = "nowrap";
     }
   });
 };
